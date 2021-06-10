@@ -27,18 +27,10 @@
 
 <style type="text/css">
 <!--
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
-}
-body {
-  width: 100%;
-  color: #222;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16pt;
-  font-weight: 400;
+  background: #f3f3f3;
 }
 .gallery {
   background: #FFF;
@@ -59,175 +51,204 @@ body {
   font-size: 80px;
   color: white;
 }
-.item {
-  display: flex;
-  flex-wrap: nowrap;
-//  margin-bottom: 2em;
+
+.yokonarabe > div {
+  margin: 0;
+  background: #f3f3f3;
 }
-.item:nth-child(odd) {
-  flex-direction: row-reverse;
+.yokonarabe > div img {
+  max-width: 100%;
 }
-.item-image {
-  width: 50%;
+@media(min-width: 800px) {
+  .yokonarabe {
+    display: flex;
+    width: 100%;
+    margin: 0;
+  }
+  .yokonarabe > div.single {
+    width: 100%;
+  }
+  .yokonarabe > div.single img {
+    width: 100%;
+    object-fit:cover;
+  }
+  .yokonarabe > div {
+    width: 50%;
+  }
+  .yokonarabe img {
+    max-width: 100%;
+  }
 }
-.item-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.item-text {
-  flex: 1;
-  padding: 5em;
-}
+
 -->
 </style>
 </head>
 <body>
-
-<div class="item">
-  <img src="images/CodeForFree_Top.svg" style="max-width: 100%;">
-</div>
-<div class="item">
-  <div class="item-text">
-<h2><strong>情報収集できる</strong></h2>
-<br>
-コードフォーフリー(<u>Code for Free</u>)は、<br>
-<br>
-モバイル、フロント、IoT、MLの<br>
-<br>
-フリーランスエンジニアが<br>
-<br>
-案件の情報を収集するための<br>
-<br>
-Slack ワークスペース です<br>
-<br>
-誰でも無料で参加できます<br>
-<center>
-<a href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><img src="images/CodeForFreeButton.svg" style="width:270px;height:140px;text-align:center;"></a>
-</center>
-  </div>
-<div class="item-image" ><img src="images/CodeForFree_Key.svg" style="max-width: 100%;"></div>
-</div>
-<!-- Carousel -->
-<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' style="margin-bottom: 40px;" >
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;font-weight:900;">▼ 当日に公開された最新の案件が見られます</font><br>
-  <img src="images/maifuri_caselist.png" style="width:80%;" >
-  </center>
-  </div>
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;font-weight:900;">
-  ▼ 直近12週間の平均の単価の推移が見られます
-  </font><br>
-  <img src="images/maifuri_12weeks.png" style="width:80%;" >
-  </center>
-  </div>
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;font-weight:900;">
-  ▼ インターネットに非公開の案件に応募できます
-  </font><br>
-  <img src="images/maifuri_case_closed.png" style="width:80%;" >
-  </center>
-  </div>
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;font-weight:900;">
-  ▼ あなたがご存知の案件を共有できます
-  </font><br>
-  <img src="images/maifuri_case_open.png" style="width:80%;" >
-  </center>
+<div class="yokonarabe">
+  <div class="single" >
+    <img src="images/CodeForFree_Top.svg" >
   </div>
 </div>
-<!-- Carousel -->
-
-<div class="item">
-<div class="item-text">
-<h2><strong>話せること</strong></h2><br>
-─&nbsp;この案件の稼働は月何時間？<br>
-<br>
-─&nbsp;この現場は技術レベルが高い<br>
-<br>
-─&nbsp;WebRTCを使う案件はある？<br>
-<br>
-─&nbsp;こんなときのFirestoreの設計は？<br>
-<br>
-─&nbsp;その現場は短納期で報酬が安い<br>
-<center>
-<a href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><img src="images/CodeForFreeButton.svg" style="width:270px;height:140px;text-align:center;"></a>
-</center>
-  </div>
-  <div class="item-image"><img src="images/CodeForFree_Lead2.svg" style="max-width: 100%;"></div>
-</div>
-<!-- Carousel -->
-<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' style="margin-bottom: 40px;" >
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;color:#000000; font-weight:900;">
-  ▼ あなたの自己紹介を登録できます
-  </font><br>
-  <img src="images/vitae_profile.png" style="width:80%;" >
-  </center>
-  </div>
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:22pt;color:#000000; font-weight:900;">
-  ▼ あなたがアドバイスできることを書いておきます
-  </font><br>
-  <img src="images/vitae_advise.png" style="width:80%;" >
-  </center>
-  </div>
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;color:#000000; font-weight:900;">
-  ▼ アドバイスできる人を探します
-  </font><br>
-  <img src="images/vitae_search.png" style="width:80%;" >
-  </center>
-  </div>
-  <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
-  <center>
-  <font style="font-size:24pt;color:#000000; font-weight:900;">
-  ▼ メンションしてアドバイスをお願いできます
-  </font><br>
-  <img src="images/vitae_sendmessage.png" style="width:80%;" >
-  </center>
-  </div>
-</div>
-<!-- Carousel -->
-<div class="item" >
-<div class="item-text">
-<h2><strong>参加者は？</strong></h2>
-<br>
-現場を移ろうとしている<br>
-<br>
-案件ごとの月単価の相場を知りたい<br>
-<br>
-案件の技術的ニーズを探りたい<br>
-<br>
-現場を知っている人に教えて欲しい<br>
-<br>
-他の人のアドバイスを訊きたい<br>
-<center>
-<a href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><img src="images/CodeForFreeButton.svg" style="width:270px;height:140px;text-align:center;"></a>
-</center>
-</div>
-<div class="item-image"><img src="images/CodeForFree_SPhone.svg" style="max-width: 100%;"></div>
-</div>
-
-
-	<!-- copyright start-->
-    <div class="copyright_section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-sm-12">
-            <p style="text-align:center;" >Developed by 毎フリ (<a href="https://twitter.com/mai_furi" target="_blank" style="color:#000;" >@mai_furi</a>) with <font style="color:#ff7377">&hearts;</font></p>
-    			</div>
-    		</div>
-    	</div>
+<div class="yokonarabe">
+  <div >
+    <div style="width:360px;margin:auto;">
+    <h2><strong>情報収集できる</strong></h2>
+    <h3>
+    <br>
+    コードフォーフリー(<u>Code for Free</u>)は、<br>
+    <br>
+    モバイル、フロント、IoT、MLの<br>
+    <br>
+    フリーランスエンジニアが<br>
+    <br>
+    案件の情報を収集するための<br>
+    <br>
+    Slack ワークスペース です<br>
+    <br>
+    誰でも無料で参加できます<br>
+    </h3>
+    <center>
+    <a href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><img src="images/CodeForFreeButton.svg" style="width:270px;height:140px;text-align:center;"></a>
+    </center>
     </div>
+  </div>
+  <div>
+  <img src="images/CodeForFree_Key.svg">
+  </div>
+</div>
+
+<!-- Carousel -->
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' style="margin-bottom: 40px;" >
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;font-weight:900;">▼ 当日に公開された最新の案件が見られます</font><br>
+      <img src="images/maifuri_caselist.png" style="width:80%;" >
+      </center>
+      </div>
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;font-weight:900;">
+      ▼ 直近12週間の平均の単価の推移が見られます
+      </font><br>
+      <img src="images/maifuri_12weeks.png" style="width:80%;" >
+      </center>
+      </div>
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;font-weight:900;">
+      ▼ インターネットに非公開の案件に応募できます
+      </font><br>
+      <img src="images/maifuri_case_closed.png" style="width:80%;" >
+      </center>
+      </div>
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;font-weight:900;">
+      ▼ あなたがご存知の案件を共有できます
+      </font><br>
+      <img src="images/maifuri_case_open.png" style="width:80%;" >
+      </center>
+      </div>
+    </div>
+<!-- Carousel -->
+
+<div class="yokonarabe">
+  <div>
+    <div style="margin:auto;width:360px;">
+    <h2><strong>話せること</strong></h2><br>
+    <h3>
+    ─&nbsp;この案件の稼働は月何時間？<br>
+    <br>
+    ─&nbsp;この現場は技術レベルが高い<br>
+    <br>
+    ─&nbsp;WebRTCを使う案件はある？<br>
+    <br>
+    ─&nbsp;こんなときのFirestoreの設計は？<br>
+    <br>
+    ─&nbsp;その現場は短納期で報酬が安い<br>
+    </h3>
+    <center>
+    <a href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><img src="images/CodeForFreeButton.svg" style="width:270px;height:140px;text-align:center;"></a>
+    </center>
+    </div>
+  </div>
+  <div>
+    <img src="images/CodeForFree_Lead2.svg" >
+  </div>
+</div>
+
+
+<!-- Carousel -->
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' style="margin-bottom: 40px;" >
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;color:#000000; font-weight:900;">
+      ▼ あなたの自己紹介を登録できます
+      </font><br>
+      <img src="images/vitae_profile.png" style="width:80%;" >
+      </center>
+      </div>
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:22pt;color:#000000; font-weight:900;">
+      ▼ あなたがアドバイスできることを書いておきます
+      </font><br>
+      <img src="images/vitae_advise.png" style="width:80%;" >
+      </center>
+      </div>
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;color:#000000; font-weight:900;">
+      ▼ アドバイスできる人を探します
+      </font><br>
+      <img src="images/vitae_search.png" style="width:80%;" >
+      </center>
+      </div>
+      <div class="gallery-cell" style="padding-top:2em; background: #ffffff;">
+      <center>
+      <font style="font-size:24pt;color:#000000; font-weight:900;">
+      ▼ メンションしてアドバイスをお願いできます
+      </font><br>
+      <img src="images/vitae_sendmessage.png" style="width:80%;" >
+      </center>
+      </div>
+    </div>
+<!-- Carousel -->
+
+
+<div class="yokonarabe">
+  <div style="margin:32pt;">
+    <div style="margin:auto;width:360px;">
+    <h2><strong>参加者は？</strong></h2>
+    <h3>
+    <br>
+    現場を移ろうとしている<br>
+    <br>
+    案件ごとの月単価の相場を知りたい<br>
+    <br>
+    案件の技術的ニーズを探りたい<br>
+    <br>
+    現場を知っている人に教えて欲しい<br>
+    <br>
+    他の人のアドバイスを訊きたい<br>
+    </h3>
+    <center>
+    <a href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><img src="images/CodeForFreeButton.svg" style="width:270px;height:140px;text-align:center;"></a>
+    </center>
+    </div>
+  </div>
+  <div>
+    <img src="images/CodeForFree_SPhone.svg" >
+  </div>
+</div>
+
+
+<!-- copyright start-->
+<div class="yokonarabe">
+  <div class="single" >
+    <p style="text-align:center;" >Developed by 毎フリ (<a href="https://twitter.com/mai_furi" target="_blank" style="color:#000;" >@mai_furi</a>) with <font style="color:#ff7377">&hearts;</font></p>
+  </div>
+</div>
 	<!-- copyright end-->
 </body>
 </html>
